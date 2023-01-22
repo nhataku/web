@@ -1,0 +1,334 @@
+
+.menu {
+    border-bottom: #ae7c78 solid 1px ;
+    border-top: #ae7c78 solid 1px ;
+    display: flex;
+    flex-direction: row ;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:26px; 
+    max-width:1200px;
+    margin:0 auto;
+}
+.menutext{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+    color: #AE7C78;
+}
+
+
+.container1{
+    
+    display: flex;
+    justify-content: space-around;
+    margin: 117px 53px;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 15px;
+    margin-top: 122px;
+}
+.container1_text_row1{
+font-family: 'Playfair Display';
+font-style: normal;
+font-weight: 400;
+font-size: 44px;
+line-height: 59px;
+color: #AE7C78;
+margin-bottom: 24px;
+}
+.container1_text_row2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    
+    color: #AE7C78;
+}
+.button1{
+    background-color:#d89999;
+    border-radius: 100px;
+    height: 30px;
+    width: 350px;
+    text-align: center;
+    padding:30px 0;
+    margin:64px 0 215px 0px;
+    color: #FFFFFF;
+}
+.button1_text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+.container1_img{
+    
+    border-radius: 10px;
+   
+}
+.container2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 117px 53px;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.block_text1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    
+    color: #AE7C78;
+}
+.block_text2 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #AE7C78;
+}
+.container3{
+
+    display: flex;
+    justify-content: center;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 15px;   
+}
+h1{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 48px;
+    /* identical to box height */
+
+    letter-spacing: 0.02em;
+
+    color: #AE7C78;
+}
+.container4{
+
+    display: flex;
+    justify-content: center;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 15px;   
+}
+.container4_text1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #AE7C78;
+}
+.container4_text2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #AE7C78;
+}
+.button2 {
+    background-color:#d89999;
+    border-radius: 100px;
+    height: 30px;
+    width: 300px;
+    text-align: center;
+    padding: 25px 0;
+    margin:90px 0 50px 0;
+}
+.button2_text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+
+}
+
+.container5{
+    background: #AE7C78;
+    margin: 94px 94px;
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    max-height: 402px;
+    margin:0 auto;
+    padding: 0 15px;   
+}
+
+.container5_text1{
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 59px;
+    letter-spacing: 0.02em;
+
+    color: #FFFFFF;
+}
+.container5_text2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: #FFFFFF;
+}
+.container6{
+   
+    display: flex;
+    justify-content: center;
+    max-width:1200px;
+    margin:0 auto;
+    padding: 0 15px;
+}
+.container7{
+    display: flex;
+    text-align: center;
+    margin:0 30px;
+}
+footer{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top:26px; 
+    margin:0 auto;
+    background: #ae7c78;
+    max-width: 1200px;
+    height: 97px;
+    left: 0px;
+    top: 2350.22px;
+}
+.footer_text{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #FFFFFF;
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+     .container1_img img {
+        width: 100%;
+    } 
+    .container1_text_row1{
+        font-weight: 150%;
+        font-size: 150%;
+        line-height: 150%;
+    }
+    .container1_text_row2{
+        
+        font-weight: 100%;
+        font-size: 100%;
+        line-height: 100%;
+        
+        color: #AE7C78;
+    }
+    .button1{
+       
+        width: 100%;
+    
+        margin:0px 50px 60px 0px;
+        color: #FFFFFF;
+    }
+    .container5_img img {
+        width: 400px;
+        height: 402px;
+    }
+
+
+}
+/* Smartphones */
+@media (min-width: 481px) and (max-width: 767px) {
+    .container1{
+        flex-wrap: wrap;
+    }
+    .container1_img img {
+        width: 420px;
+       
+    } 
+    .container1_text_row1{
+    
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    
+    
+    }
+    .container1_text_row2{
+        
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+        
+    
+    }
+    .button1{
+       
+        width: 100%;
+    
+    }
+    .container2{
+        flex-direction: column;
+        
+    }
+
+    .container4{
+        flex-direction: column;
+        justify-content: center;
+    }
+        .container5_img img{
+            display: none;
+        }
+        
+        .container5{
+            flex-wrap: wrap;
+            margin:0 auto;
+        }
+        .container6{
+            flex-wrap: wrap;
+            margin:0 auto;
+        }
+        footer{
+            flex-wrap: wrap;
+        }
+    }
