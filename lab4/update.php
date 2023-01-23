@@ -1,70 +1,82 @@
 <?php
-$id=$_GET['id'];
+$id = $_GET['id'];
+echo $id;
+$doc = new DOMDocument();
+$doc->load('product.xml');
+$products = $doc->getElementsByTagName('products')->item(0);
+$product = $products->getElementsByTagName('product');
+$product1 = $products->getElementsByTagName('product');
+$oldname = $product1->item($id-1)->getElementsByTagName('name')->item(0)->nodeValue;
+$oldprice = $product1->item($id-1)->getElementsByTagName('price')->item(0)->nodeValue;
+$olddescr = $product1->item($id-1)->getElementsByTagName('descr')->item(0)->nodeValue;
 
-$dom = new DOMDocument();
-$dom->load('files/data.xml');
-$products = $dom->getElementsByTagName('products')->item(0);
-$product=$products->getElementsByTagName('product');
-$i=0;
-$my_product=$product->item(1);
-while (is_object($product->item($i++))){
-    $prd=$product->item($i-1)->getElementsByTagName('id')->item(0);
-    $prd_id= $prd->nodeValue;
-    if( $prd_id== $id){
-        $my_product = $product->item($i-1);
-        break;
-    }
-}
-if(isset($_POST['sbm'])){
-    $prd_name = $_POST['prd_name'];
+if (isset($_POST['submit'])){
+    $the_name = $_POST['the_name'];
     $price = $_POST['price'];
-    $description = $_POST['description'];
-    $new_prd = $dom->createElement('product');
+    $descr = $_POST['descr'];
 
-    $node_id = $dom->createElement('id',$id);
-    $new_prd->appendChild($node_id);
+    $newprod = $doc->createElement('product');
 
-    $node_name = $dom->createElement('name',$prd_name);
-    $new_prd->appendChild($node_name);
+    $new_id = $doc->createElement('id', $id);
+    $newprod->appendChild($new_id);
 
-    $node_price = $dom->createElement('price',$price);
-    $new_prd->appendChild($node_price);
+    if (!empty($the_name)){
+        $new_name = $doc->createElement('name', $the_name);
+    }
+    else{
+        $new_name = $doc->createElement('name', $oldname);
+    }
+    $newprod->appendChild($new_name);
 
-    $node_description = $dom->createElement('description',$description);
-    $new_prd->appendChild($node_description);
-    $i=0;
-    while (is_object($product->item($i++))){
-        $prd=$product->item($i-1)->getElementsByTagName('id')->item(0);
-        $prd_id= $prd->nodeValue;
-        if( $prd_id== $id){
-            $products->replaceChild($new_prd,$product->item($i-1));
+    if (!empty($price)){
+        $new_price = $doc->createElement('price', $price);
+    }
+    else{
+        $new_price = $doc->createElement('price', $oldprice);
+    }
+    $newprod->appendChild($new_price);
+
+    if (!empty($descr)){
+        $new_descr = $doc->createElement('descr', $descr);
+    }
+    else{
+        $new_descr = $doc->createElement('descr', $olddescr);
+    }
+    $newprod->appendChild($new_descr);
+
+    $cnt = 0;
+
+    while (is_object($product->item($cnt++))){
+        $tmp = $product->item($cnt-1)->getElementsByTagName('id')->item(0);
+        $tmpid = $tmp->nodeValue;
+        if ($tmpid == $id){
+            $products->replaceChild($newprod, $product -> item($cnt - 1));
             break;
         }
     }
-
-    $dom->formatOutput = true;
-    $dom->save('files/data.xml')or die('Error');
+    $doc->formatOutput = true;
+    $doc->save('product.xml') or die ('Death');
     header('location: index.php?page_layout=list');
 }
 ?>
 
 <div class = "prod-content">
     <div class = "content-name">
-        <h1>HOME</h1>
+        <h1>Edit content </h1>
     </div>
     <div class = "prod-list">
         <form method = "POST" enctype="multipart/form-data">
             <div class = "items">
                 <label for = "upd">Name</label>
-                <textarea id = "upd" rows="1" name = "name" class="form-control" required><?php echo $get_to_upd['name']?></textarea>
+                <textarea id = "upd" rows="1" name = "the_name" class="form-control" required><?php echo $oldname?></textarea>
             </div>
             <div class = "items">
                 <label for = "upd">Price</label>
-                <textarea id = "upd" rows="1" name = "price" class="form-control" required><?php echo $get_to_upd['price']?></textarea>
+                <textarea id = "upd" rows="1" name = "price" class="form-control" required><?php echo $oldprice?></textarea>
             </div>
             <div class = "items">
                 <label for = "upd">Description</label>
-                <textarea id = "upd" rows="3" name = "description" class="form-control" required><?php echo $get_to_upd['description']?></textarea>
+                <textarea id = "upd" rows="3" name = "descr" class="form-control" required><?php echo $olddescr?></textarea>
             </div>
             <button name = "submit" type = "submit">Save</button>
         </form>
