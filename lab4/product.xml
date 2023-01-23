@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product>
+        <id>1</id>
+        <name>Russian language course</name>
+        <price>1000usd.</price>
+        <descr>OK, good, хорошо</descr>
+    </product>
+    
+    <product>
+        <id>2</id>
+        <name>Math course</name>
+        <price>999usd.</price>
+        <descr>bad, good, interesting</descr>
+    </product>
+<product><id>3</id><name>3</name><price>3</price><descr>3</descr></product><product><id>4</id><name>3</name><price>3</price><descr>3</descr></product><product><id>5</id><name>d</name><price>23</price><descr>3</descr></product></products>
